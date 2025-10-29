@@ -1,0 +1,38 @@
+/*Colored circles*/
+.circle {
+    width: 80%;
+    aspect-ratio: 1 / 1; /* keeps height equal to width */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    margin: 10px auto; /* centers the circle horizontally */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .circle:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+    }
+    
+    .circle-text {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    }
+    
+    
+    /* Color variations */
+    .circle-1 {
+    background: #53748e;
+    }
+    .circle-2 {
+    background: #2c512d;
+    }
+    .circle-3 {
+    background: #49913b;
+    }
+    .circle-4 {
+    background: #f4942d;
+    }
