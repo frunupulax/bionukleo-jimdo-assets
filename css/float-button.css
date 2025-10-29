@@ -1,0 +1,50 @@
+/* Container for the two icons, left-aligned and centered vertically */
+.fixed-icons {
+    position: fixed !important;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 18px; /* gap between icons */
+    z-index: 99999;
+    pointer-events: auto;
+  }
+  
+/* Common styles for both icons */
+.fixed-icons .icon {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    transition: 0.3s ease, transform 0.2s;
+    cursor: pointer;
+      /* background image properties */
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+  
+/* Hover effect for both icons */
+.fixed-icons .icon:hover {
+    transform: scale(1.05);
+}
+  
+/* Specific icons with different images */
+.fixed-icons .contact-icon {
+    background-image: url('https://image.jimcdn.com/app/cms/image/transf/dimension=640x10000:format=png/path/s847457b25648baa0/image/iacda5184b2c4269b/version/1761321206/image.png'); /* replace with your uploaded file URL */
+}
+  
+.fixed-icons .linkedin-icon {
+    background-image: url('https://image.jimcdn.com/app/cms/image/transf/dimension=640x10000:format=png/path/s847457b25648baa0/image/i37a275eeefeb33d9/version/1761321191/image.png'); /* replace with your uploaded file URL */
+}
+  
+/* Hide on smaller screens */
+@media (max-width: 768px) {
+    .fixed-icons {
+        display: none;
+    }
+}
