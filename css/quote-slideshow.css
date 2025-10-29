@@ -1,0 +1,89 @@
+/* Outer wide grey band */
+.quote-bg {
+    background-color: #eeeeee;
+    margin: 0 -500%;
+    padding: 30px 500% !important;
+    text-align: center;
+    color: #838383;
+  }
+  
+  /* Inner slideshow */
+  .quote-slideshow {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  
+  /* Sliding track */
+  .quote-track {
+    display: flex;
+    transition: transform 1s ease-in-out;
+    width:100%;
+  }
+  
+  /* Each slide */
+  .quote-slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;   /* horizontal centering */
+    align-items: center;       /* vertical centering */
+    
+  }
+  
+  .quote-mark {
+    font-size: 5rem;
+    font-family: 'Alegreya SC', serif;
+    line-height: 0;          /* prevents line-height from expanding */
+  }
+  
+  .quote-mark.left {
+      position: relative;
+      vertical-align: top;
+      top: 0.2em;
+  }
+  
+  .quote-mark.right {
+      position: relative;
+      vertical-align: bottom;
+      bottom: 0.2em;
+  }
+  
+  .quote-text {
+    font-size: 1.5rem;       /* your normal quote size */
+    line-height: 1.6;
+    display: inline-block;
+    vertical-align: middle;
+    margin: auto;
+    width:80%;
+  }
+  
+  /* Arrows inside box */
+  .quote-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: #838383;
+    cursor: pointer;
+    user-select: none;
+    z-index: 10;
+    padding: 5px 12px;
+    transition: all 0.3s ease;
+  }
+  
+  .quote-nav:hover {
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+  }
+  
+  /* Arrows now *inside* the text area */
+  .quote-nav.prev {
+    left: 1.5%;
+  }
+  
+  .quote-nav.next {
+    right: 1.5%;
+  }
