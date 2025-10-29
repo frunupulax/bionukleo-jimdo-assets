@@ -1,0 +1,109 @@
+<div class="cm-filter-controls">
+    <input type="text" id="search" placeholder="Search..." /> <select id="category-filter">
+        <option value="all" class="cm-optionGroup">
+            All categories
+        </option>
+        <option value="enzyme" class="cm-optionGroup">
+            All enzymes
+        </option>
+        <option value="redox" class="cm-optionGroup">
+            Redox-reaction
+        </option>
+        <option value="pento" class="cm-optionGroup">
+            Pentosyltransfer
+        </option>
+        <option value="pnp">
+            &#160;&#160;&#160;Purine nucleoside phosphorylases
+        </option>
+        <option value="pynp">
+            &#160;&#160;&#160;Pyrimidine nucleoside phosphorylases
+        </option>
+        <option value="otherPento">
+            &#160;&#160;&#160;Other pentosyltransferases
+        </option>
+        <option value="phospho" class="cm-optionGroup">
+            Phosphorylation
+        </option>
+        <option value="nk">
+            &#160;&#160;&#160;Nucleoside kinases
+        </option>
+        <option value="nmpk">
+            &#160;&#160;&#160;NMP kinases
+        </option>
+        <option value="ndpk">
+            &#160;&#160;&#160;NDP kinases
+        </option>
+        <option value="ppk">
+            &#160;&#160;&#160;Polyphosphate kinases
+        </option>
+        <option value="otherPhospho">
+            &#160;&#160;&#160;Other kinases
+        </option>
+        <option value="atpreg">
+            &#160;&#160;&#160;ATP regeneration
+        </option>
+        <option value="hydro" class="cm-optionGroup">
+            Hydrolysis
+        </option>
+        <option value="intraphos" class="cm-optionGroup">
+            Intramolecular phosphotransfer
+        </option>
+        <option value="kit" class="cm-optionGroup">
+            All kits
+        </option>
+        <option value="pub">
+            &#160;&#160;&#160;Phosphate detection
+        </option>
+        <option value="eset">
+            &#160;&#160;&#160;Enzyme sets
+        </option>
+        <option value="fineChemical" class="cm-optionGroup">
+            All fine chemicals
+        </option>
+        <option value="sugar">
+            &#160;&#160;&#160;Pentose-1-phosphates
+        </option>
+        <option value="donor">
+            &#160;&#160;&#160;Phosphate donors
+        </option>
+        <option value="ntp">
+            &#160;&#160;&#160;Nucleoside triphosphates
+        </option><!-- Add more categories as needed -->
+    </select>
+</div>
+<br />
+
+<div class="cm-grid-container" id="product-grid">
+    <!-- Product items will be dynamically inserted here -->
+</div>
+
+<div class="cm-grid-container" id="product-grid">
+</div>
+<script>
+/* <![CDATA[ */
+document.addEventListener('DOMContentLoaded', () => {
+    ProductCatalog.renderProducts('product-grid', '', 'all');
+});
+/*]]>*/
+</script> 
+<script>
+
+
+
+/* <![CDATA[ */
+
+document.addEventListener('DOMContentLoaded', () => {
+  const search = document.getElementById('search');
+  const category = document.getElementById('category-filter');
+  
+  function update() {
+    ProductCatalog.renderProducts('product-grid', search.value, category.value);
+  }
+
+  search.addEventListener('input', update);
+  category.addEventListener('change', update);
+
+  update();
+});
+/*]]>*/
+</script>
