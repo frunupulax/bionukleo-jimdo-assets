@@ -452,6 +452,15 @@ window.ProductCatalog = (function() {
         },
 
         { 
+            id: 'E-AD-0001', 
+            name: 'Adenosine deaminase AD01', 
+            categories: ['enzyme', 'hydro'], 
+            price: 'from €180.00', 
+            description: '<i>Escherichia coli ada</i>, mesophilic', 
+            url: 'https://www.bionukleo.com//app/module/webproduct/goto/m/m90badce5da741912' 
+        },
+
+        { 
             id: 'E-PM-0001', 
             name: 'Phosphopentomutase PM01', 
             categories: ['enzyme', 'intraphos'], 
